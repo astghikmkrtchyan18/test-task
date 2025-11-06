@@ -1,7 +1,5 @@
 # Slooze Test Task
 
-![Project Banner](https://via.placeholder.com/1200x300.png?text=Slooze+Test+Task)
-
 ## 🚀 Live Demo
 
 Check out the live project here: [Slooze Test Task Live](https://test-task-three-beryl.vercel.app/)
