@@ -1,114 +1,78 @@
 # Slooze Test Task
 
-A modern **Next.js 13** application demonstrating a store management system with role-based access, product management, and light/dark theme support.
+A **Next.js 13** project with **TypeScript**, **Tailwind CSS**, **Zustand** for state management, **React Hook Form** with **Zod** validation, and **Next Themes** for light/dark mode support. This project includes a dashboard, products page, authentication, and role-based access (Manager / StoreKeeper).
 
 ---
 
-## 📦 Project Overview
+## Features
 
-This project is a demo application built with **Next.js**, **React**, and **TypeScript**. It features:
-
-- Role-based authentication (`Manager` and `StoreKeeper`)
-- Persistent login state using **Zustand** and `localStorage`
-- Product CRUD functionality (add, edit, view)
-- Light/Dark theme toggle using **next-themes**
-- Form validation using **React Hook Form** and **Zod**
-- Modern UI with **TailwindCSS** and **Lucide React icons**
+* Light/Dark mode support using `next-themes`
+* Role-based authentication (`Manager` / `StoreKeeper`)
+* Add, edit, and list products
+* Zustand store for persistent auth (`localStorage`)
+* Responsive layout with Tailwind CSS
+* Form validation using `react-hook-form` + `zod`
 
 ---
 
-## ⚡ Features
-
-### Authentication & Roles
-- Login with role selection
-- **Manager**: Can add and edit products
-- **StoreKeeper**: Can view products only
-
-### Products
-- Add new products (name, category, description, price)
-- Edit existing products
-- Products persist in-memory and update dynamically on the page
-
-### Theme Support
-- Light and Dark mode
-- Theme preference saved in `localStorage`
-- Smooth transitions with TailwindCSS
-
----
-
-## 🛠 Tech Stack
-
-- **Next.js 16** – App framework
-- **React 19** – UI library
-- **TypeScript** – Type safety
-- **TailwindCSS 4** – Utility-first CSS
-- **Zustand** – State management with persistence
-- **React Hook Form + Zod** – Form handling & validation
-- **next-themes** – Theme toggling
-- **Lucide React** – Icons
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js >= 20
-- npm or yarn
-
-### Installation
+## Installation
 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/slooze-test-task.git
-cd slooze-test-task
+git clone https://github.com/astghikmkrtchyan18/test-task.git
+cd test-task
 ```
 
 2. Install dependencies:
 
 ```bash
 npm install
-# or
-yarn install
 ```
 
-3. Start the development server:
+3. Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
-## 📁 Project Structure
+## Scripts
 
-```
-.
-├── app/                 # Next.js app directory
-├── components/          # Reusable components (Sidebar, Header, AddProductForm, etc.)
-├── store/               # Zustand store (auth)
-├── pages/api/           # API routes (auth, products)
-├── public/              # Public assets
-├── styles/              # Tailwind and global styles
-└── README.md            # Project documentation
-```
+* `npm run dev` – start development server
+* `npm run build` – build for production
+* `npm run start` – start production server
 
 ---
 
-## 📝 Scripts
+## Login Credentials
 
-- `npm run dev` – Start development server
-- `npm run build` – Build for production
-- `npm run start` – Start production server
+Use the following credentials to log in and test different roles:
+
+| Role        | Email                                             | Password | Token Example          |
+| ----------- | ------------------------------------------------- | -------- | ---------------------- |
+| Manager     | [manager@example.com](mailto:manager@example.com) | 1234     | fake-manager-token     |
+| StoreKeeper | [store@example.com](mailto:store@example.com)     | 1234     | fake-storekeeper-token |
 
 ---
 
-## 💡 Notes
+## Technologies Used
 
-- Authentication state and theme preference are persisted in local storage.
-- Product data is stored in-memory in API routes. Replace with a real database for production.
-- The app demonstrates dynamic state updates when products are added or edited.
+* **Next.js 13**
+* **React 19**
+* **TypeScript**
+* **Tailwind CSS**
+* **Zustand**
+* **React Hook Form**
+* **Zod**
+* **Next Themes**
+* **Lucide React Icons**
+
+---
+
+## License
+
+This project is private and used for testing purposes.
