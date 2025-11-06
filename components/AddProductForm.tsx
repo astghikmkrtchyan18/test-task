@@ -1,6 +1,7 @@
-"use client";
+'use client';
 
 import { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
 
 interface AddProductFormProps {
   onClose: () => void;
@@ -13,6 +14,9 @@ export default function AddProductForm({
   onAdded,
   editingProduct,
 }: AddProductFormProps) {
+  const { theme } = useTheme();
+  const isLight = theme === 'light';
+
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [category, setCategory] = useState("");
@@ -64,8 +68,12 @@ export default function AddProductForm({
   };
 
   return (
-    <div className="w-full max-w-lg bg-white dark:bg-zinc-800 p-6 rounded-lg shadow-lg mt-6">
-      <h2 className="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-200">
+    <div
+      className={`w-full max-w-lg p-6 rounded-lg shadow-lg mt-6 transition-colors duration-300 ${
+        isLight ? 'bg-white text-gray-900' : 'bg-zinc-800 text-gray-200'
+      }`}
+    >
+      <h2 className="text-xl font-semibold mb-4">
         {editingProduct ? "Edit Product" : "Add New Product"}
       </h2>
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
@@ -74,28 +82,44 @@ export default function AddProductForm({
           placeholder="Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="w-full p-3 rounded border border-gray-300 dark:border-zinc-600 bg-white dark:bg-zinc-700 text-gray-900 dark:text-gray-200"
+          className={`w-full p-3 rounded border transition-colors duration-300 ${
+            isLight
+              ? 'border-gray-300 bg-white text-gray-900'
+              : 'border-zinc-600 bg-zinc-700 text-gray-200'
+          }`}
         />
         <input
           type="text"
           placeholder="Description"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
-          className="w-full p-3 rounded border border-gray-300 dark:border-zinc-600 bg-white dark:bg-zinc-700 text-gray-900 dark:text-gray-200"
+          className={`w-full p-3 rounded border transition-colors duration-300 ${
+            isLight
+              ? 'border-gray-300 bg-white text-gray-900'
+              : 'border-zinc-600 bg-zinc-700 text-gray-200'
+          }`}
         />
         <input
           type="text"
           placeholder="Category"
           value={category}
           onChange={(e) => setCategory(e.target.value)}
-          className="w-full p-3 rounded border border-gray-300 dark:border-zinc-600 bg-white dark:bg-zinc-700 text-gray-900 dark:text-gray-200"
+          className={`w-full p-3 rounded border transition-colors duration-300 ${
+            isLight
+              ? 'border-gray-300 bg-white text-gray-900'
+              : 'border-zinc-600 bg-zinc-700 text-gray-200'
+          }`}
         />
         <input
           type="number"
           placeholder="Price"
           value={price}
           onChange={(e) => setPrice(Number(e.target.value))}
-          className="w-full p-3 rounded border border-gray-300 dark:border-zinc-600 bg-white dark:bg-zinc-700 text-gray-900 dark:text-gray-200"
+          className={`w-full p-3 rounded border transition-colors duration-300 ${
+            isLight
+              ? 'border-gray-300 bg-white text-gray-900'
+              : 'border-zinc-600 bg-zinc-700 text-gray-200'
+          }`}
         />
         {error && <p className="text-red-500 text-sm">{error}</p>}
         <div className="flex gap-2">
@@ -113,7 +137,11 @@ export default function AddProductForm({
           <button
             type="button"
             onClick={onClose}
-            className="px-4 py-2 bg-gray-300 hover:bg-gray-400 text-gray-900 rounded transition"
+            className={`px-4 py-2 rounded transition ${
+              isLight
+                ? 'bg-gray-300 hover:bg-gray-400 text-gray-900'
+                : 'bg-zinc-700 hover:bg-zinc-600 text-gray-200'
+            }`}
           >
             Cancel
           </button>
