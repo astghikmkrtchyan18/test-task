@@ -1,36 +1,114 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Slooze Test Task
 
-## Getting Started
+A modern **Next.js 13** application demonstrating a store management system with role-based access, product management, and light/dark theme support.
 
-First, run the development server:
+---
+
+## 📦 Project Overview
+
+This project is a demo application built with **Next.js**, **React**, and **TypeScript**. It features:
+
+- Role-based authentication (`Manager` and `StoreKeeper`)
+- Persistent login state using **Zustand** and `localStorage`
+- Product CRUD functionality (add, edit, view)
+- Light/Dark theme toggle using **next-themes**
+- Form validation using **React Hook Form** and **Zod**
+- Modern UI with **TailwindCSS** and **Lucide React icons**
+
+---
+
+## ⚡ Features
+
+### Authentication & Roles
+- Login with role selection
+- **Manager**: Can add and edit products
+- **StoreKeeper**: Can view products only
+
+### Products
+- Add new products (name, category, description, price)
+- Edit existing products
+- Products persist in-memory and update dynamically on the page
+
+### Theme Support
+- Light and Dark mode
+- Theme preference saved in `localStorage`
+- Smooth transitions with TailwindCSS
+
+---
+
+## 🛠 Tech Stack
+
+- **Next.js 16** – App framework
+- **React 19** – UI library
+- **TypeScript** – Type safety
+- **TailwindCSS 4** – Utility-first CSS
+- **Zustand** – State management with persistence
+- **React Hook Form + Zod** – Form handling & validation
+- **next-themes** – Theme toggling
+- **Lucide React** – Icons
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js >= 20
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/slooze-test-task.git
+cd slooze-test-task
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Start the development server:
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📁 Project Structure
 
-## Learn More
+```
+.
+├── app/                 # Next.js app directory
+├── components/          # Reusable components (Sidebar, Header, AddProductForm, etc.)
+├── store/               # Zustand store (auth)
+├── pages/api/           # API routes (auth, products)
+├── public/              # Public assets
+├── styles/              # Tailwind and global styles
+└── README.md            # Project documentation
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📝 Scripts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `npm run dev` – Start development server
+- `npm run build` – Build for production
+- `npm run start` – Start production server
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 💡 Notes
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Authentication state and theme preference are persisted in local storage.
+- Product data is stored in-memory in API routes. Replace with a real database for production.
+- The app demonstrates dynamic state updates when products are added or edited.
