@@ -1,54 +1,57 @@
 # Slooze Test Task
 
-A **Next.js 13** project with **TypeScript**, **Tailwind CSS**, **Zustand** for state management, **React Hook Form** with **Zod** validation, and **Next Themes** for light/dark mode support. This project includes a dashboard, products page, authentication, and role-based access (Manager / StoreKeeper).
+![Project Banner](https://via.placeholder.com/1200x300.png?text=Slooze+Test+Task)
 
----
+## 🚀 Live Demo
 
-## Features
+Check out the live project here: [Slooze Test Task Live](https://test-task-three-beryl.vercel.app/)
 
-* Light/Dark mode support using `next-themes`
-* Role-based authentication (`Manager` / `StoreKeeper`)
-* Add, edit, and list products
-* Zustand store for persistent auth (`localStorage`)
-* Responsive layout with Tailwind CSS
-* Form validation using `react-hook-form` + `zod`
+## 📄 Project Overview
 
----
+This project is a simple store management interface built with **Next.js 16**, **React 19**, **Tailwind CSS 4**, **Zustand**, **React Hook Form**, and **Next-Themes** for theme switching.
 
-## Installation
+It includes functionality for:
 
-1. Clone the repository:
+* User authentication with roles (Manager, StoreKeeper)
+* Theme toggle (light/dark mode)
+* Adding, editing, and viewing products
+* Role-based access control
+* Persistent state across page reloads using local storage
+
+## 🔧 Installation & Setup
+
+Clone the repository:
 
 ```bash
 git clone https://github.com/astghikmkrtchyan18/test-task.git
 cd test-task
 ```
 
-2. Install dependencies:
+Install dependencies using **Yarn**:
 
 ```bash
-npm install
+yarn install
 ```
 
-3. Run the development server:
+Run the development server:
 
 ```bash
-npm run dev
+yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Build for production:
 
----
+```bash
+yarn build
+```
 
-## Scripts
+Start the production server:
 
-* `npm run dev` – start development server
-* `npm run build` – build for production
-* `npm run start` – start production server
+```bash
+yarn start
+```
 
----
-
-## Login Credentials
+## 🔐 Login Credentials
 
 Use the following credentials to log in and test different roles:
 
@@ -57,22 +60,35 @@ Use the following credentials to log in and test different roles:
 | Manager     | [manager@example.com](mailto:manager@example.com) | 1234     | fake-manager-token     |
 | StoreKeeper | [store@example.com](mailto:store@example.com)     | 1234     | fake-storekeeper-token |
 
----
+## 🛠 Technologies Used
 
-## Technologies Used
-
-* **Next.js 13**
+* **Next.js 16**
 * **React 19**
-* **TypeScript**
-* **Tailwind CSS**
-* **Zustand**
-* **React Hook Form**
-* **Zod**
-* **Next Themes**
-* **Lucide React Icons**
+* **Tailwind CSS 4**
+* **Zustand** for state management
+* **React Hook Form** & **Zod** for form validation
+* **Next-Themes** for light/dark mode support
+
+## 📁 Project Structure
+
+```
+├── components/        # React components
+├── pages/             # Next.js pages
+├── store/             # Zustand store
+├── public/            # Static assets
+├── styles/            # Tailwind CSS styles
+├── README.md          # Project documentation
+└── package.json       # Project metadata & scripts
+```
+
+## ⚡ Features
+
+* Persistent login with localStorage
+* Role-based access (Manager vs StoreKeeper)
+* Add/Edit products dynamically
+* Responsive UI with light/dark theme
+
 
 ---
 
-## License
-
-This project is private and used for testing purposes.
+**Note:** This project uses **Yarn** for package management.
